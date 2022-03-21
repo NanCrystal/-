@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #app {
+        width: 200px;
+        height: 100px;
+        /* flex: 0 0 100px; */
+        background-color: rgba(255, 105, 180, 0.527);
+        color: #fff;
+    }
+
+    #msg {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(72, 198, 214, 0.876);
+        color: rgb(255, 255, 255);
+    }
+
+    #age {
+        width: 200px;
+        background-color: rgba(255, 145, 145, 0.863);
+        color: rgb(227, 236, 232);
+    }
+</style>
+
+<body>
+    <div id="app"></div>
+    <div id="msg"></div>
+    <div id="age">
+        都会看到哈桑大家哈圣诞节哈师大啊十大科技哈桑大家爱神的箭哈十九点开会啊圣诞节贺卡傻傻的加沙的按时大撒旦撒旦安静的哈师大按时大点哈时间的
+    </div>
+</body>
+
+</html>
+<script>
+    let data = {
+        msg: 'crystal',
+        age: 18
+    }
+    // let vm = {}
+
+    // 监听单个值
+    // Object.defineProperty(vm, 'msg', {
+    //     get() {
+    //         return data.msg
+    //     },
+    //     set(newValue) {
+    //         if (newValue === data.msg) return
+    //         data.msg = newValue
+    //         document.querySelector('#app').textContent = data.msg
+    //     }
+    // })
+    // vm.msg = '1234'
+
+    // 监听多个值
+    // function proxyData() {
+    //     Object.keys(data).map(key => {
+    //         Object.defineProperty(vm, key, {
+    //             enumerable: true, //可枚举
+    //             configurable: true, //可配置
+    //             get() {
+    //                 return data[key]
+    //             },
+    //             set(newValue) {
+    //                 console.log('newValue', newValue);
+
+    //                 if (newValue === data[key]) return
+    //                 data[key] = newValue
+    //                 document.querySelector('#app').textContent = data[key]
+    //                 document.querySelector(`'#${data[key]}'`).textContent = data[key]
+    //             }
+    //         })
+    //     })
+    // }
+    // proxyData(data)
+
+
+    // vue3 Proxy
+    // new Proxy(target,handler)
+    // let vm = new Proxy(data, {
+    //     get(target, key) {
+    //         return target[key]
+    //     },
+    //     set(target, key, newValue) {
+    //         if (target[key] === newValue) return
+    //         target[key] = newValue;
+    //         document.querySelector(`#${key}`).textContent = target[key]
+    //     }
+    // })
+    // vm.msg = 'xxx' //触发set
+    // vm.age = 100 //触发set
+    // console.log(vm.age); //触发get
+
+    // 发布订阅模式
+    class Vue {
+        constructor() {
+            this.subs = {}
+            //    this.subs={'myclick':[fn1,fn2],'inputchange':[fn1,fn2]}
+        }
+        $on(type, fn) {
+            if (!this.subs[type]) {
+                this.subs[type] = []
+            }
+            this.subs[type].push(fn)
+        }
+        $emit(type) {
+            if (this.subs[type]) {
+
+                const args = Array.prototype.slice.call(arguments, 1)
+                this.subs[type].forEach(fn => {
+                    return fn(...args)
+                });
+
+            }
+        }
+    }
+    const evenHub = new Vue()
+    evenHub.$on('sum', function () {
+        let count = [...arguments].reduce((x, y) => x + y)
+        console.log('count', count);
+
+    })
+    evenHub.$on('max', function () {
+
+        let max = Math.max(...arguments)
+        console.log('max', max);
+
+    })
+    evenHub.$emit('sum', 1, 2, 3, 4)
+    evenHub.$emit('max', 453, 46, 4654, 46, -666)
+
+</script>

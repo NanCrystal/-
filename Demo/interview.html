@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<style>
+    /* body {
+        width: 600px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 300px;
+        background: transparent url(./1.jpg) center center no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+        filter: blur(5px);
+        z-index: -1;
+        background-size: cover;
+    }
+
+    button {
+        width: 80px;
+        height: 40px;
+        border: none;
+        border: 1px solid #06CCBF;
+        color: #06CCBF;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    button:focus,
+    button:active {
+        outline: none;
+        border: none;
+        color: #fff;
+        background-color: #06CCBF;
+    }
+
+    button:visited {
+        outline: none;
+        border: none;
+        color: #06CCBF;
+        background-color: transparent;
+    } */
+    body:-webkit-full-screen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .page {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .item {
+        border: 1px solid skyblue;
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .container {
+        margin-top: 20px;
+
+    }
+</style>
+
+<body>
+    <embed type="video/quicktime" src="rtsp://192.168.12.245:554/openUrl/zqCSi8o" width="640" height="480">
+   
+    <!-- <button onclick="handleChange()">点击</button>
+    <div id="app"></div> -->
+    <div class="page">
+        <div>
+
+        
+            <!-- <p class="text">哈哈哈哈哈哈哈哈哈哈</p>
+            <button id="copy">Copy</button>
+            <button id="past">Past</button> -->
+        </div>
+        <!-- <input type="text" class="input" value=""> -->
+        <!-- <div class="item">
+            <img src="./resource/1.jpg" alt="">
+            <p>1</p>
+        </div>
+        <div class="item">
+            <img src="./resource/1.jpg" alt="">
+            <p>2</p>
+        </div>
+        <div class="item">
+            <img src="./resource/1.jpg" alt="">
+            <p>3</p>
+        </div>
+        <div class="item">
+            <img src="./resource/1.jpg" alt="">
+            <p>4</p>
+        </div>
+        <div class="item">
+            <img src="./resource/1.jpg" alt="">
+            <p>5</p>
+        </div>
+        <div class="item">+
+            <img src="./resource/2.jpg" alt="">
+            <p>6</p>
+        </div> -->
+
+
+    </div>
+    <div class="container">
+        <button id="click">Click</button>
+        <!-- <button id="expire1">过期设置（暴力）</button>
+        <button id="expire2">过期设置（innerHtml）</button> -->
+        <ul id="wrap"></ul>
+    </div>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./index.js"></script>
+<script src="./index.json"></script>
+<script src="./icon/iconfont.js"></script>

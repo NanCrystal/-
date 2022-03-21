@@ -1,0 +1,72 @@
+body {
+  width: 100vh;
+  height: 100%;
+  /* background-color: pink; */
+  /* width: 600px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; */
+}
+
+/* body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  background: transparent url(./1.jpg) center center no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  filter: blur(5px);
+  z-index: -1;
+  background-size: cover;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  border: 1px solid #06ccbf;
+  color: #06ccbf;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #06ccbf;
+}
+
+button:visited {
+  outline: none;
+  border: none;
+  color: #06ccbf;
+  background-color: transparent;
+} */
+/* .page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  border: 1px solid skyblue;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+}
+
+p {
+  text-align: center;
+} */

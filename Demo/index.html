@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<style>
+    .page {
+ 
+     
+
+    }
+    .btn{
+        position: absolute;
+        left: 60%;
+    }
+</style>
+
+<body>
+    <!-- <embed type="video/quicktime" src="rtsp://192.168.12.245:554/openUrl/zqCSi8o" width="640" height="480"> -->
+    <div class="page">
+        <div id="playWnd" class="playWnd" style="left: 109px; top: 133px;"></div>
+        <button style="width:40px;padding:0;margin:0;" id="startPreview" class="btn">预览</button>
+    </div>
+</body>
+
+</html>
+
+<!--三个必要的js文件引入-->
+<script src="./js/jquery-1.12.4.min.js"></script>
+<script src="./js/jsencrypt.min.js"></script> <!-- 用于RSA加密 -->
+<script src="./js/jsWebControl-1.0.0.min.js"></script> <!-- 用于前端与插件交互 -->
+<script src="./js/index.js"></script> <!-- 用于前端与插件交互 -->

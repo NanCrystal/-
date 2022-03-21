@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#v0.11
+
+CACHE:
+./css
+./resource
+
+NETWORK:
+./resource/1.jpg
+
+FALLBACK:
+./a.html ./offline.html
